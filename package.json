@@ -1,0 +1,14 @@
+{
+  "name": "29a945f48b8c39dc",
+  "main": "29a945f48b8c39dc@777.js",
+  "version": "777.0.0",
+  "homepage": "https://observablehq.com/d/29a945f48b8c39dc",
+  "author": {
+    "name": "fbanda",
+    "url": "https://observablehq.com/@f-banda"
+  },
+  "type": "module",
+  "peerDependencies": {
+    "@observablehq/runtime": "4 - 5"
+  }
+}
