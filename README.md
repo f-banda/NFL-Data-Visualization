@@ -2,17 +2,10 @@
 
 **NFL Special Teams Data Visualization**
 
-By Francisco Banda
-
-**Links:**
-
-Personal Link:
+**Preview::**
 
 <https://observablehq.com/d/29a945f48b8c39dc>
 
-Class Link:
-
-<https://observablehq.com/d/ffb51608d4aac3bc>
 
 **Dataset:**
 
@@ -24,9 +17,11 @@ scouting data. Although, not all of the data is used in order to reduce unnecess
 
 optimize the performance of the visualization.
 
+
 The link to the data can be found at:
 
 <https://www.kaggle.com/competitions/nfl-big-data-bowl-2022/data>
+
 
 The datasets that are used are game, play, player, and tracking data - the PFF Scouting data is
 
@@ -40,6 +35,7 @@ playDescription. From the tracking data the values used are x, y, nflId, display
 
 jerseyNumber, position, team, frameId, gameId, and playId.
 
+
 Due to the tracking data being extremely large (1.5 GB each tracking file), we will only use the
 
 2020 tracking data. Since kaggle does not provide a direct download link to the data files, and
@@ -52,15 +48,9 @@ which was the ideal choice - I attempted to load the data through d3.csv, but it
 
 large for observable so I had to further filter out the data outside of observable which I did by
 
-simply filtering the data through a simple C++ program I made, which is shown below (Figure 1).
-
-The variable *dezarray* being an array of gameId’s.
+simply filtering the data through a simple C++ program I made.
 
 
-
-
-
-Figure 1
 
 **Data Questions:**
 
@@ -80,25 +70,13 @@ we can answer by reviewing the data with a 2D visualization that can be played e
 
 real-time. NFL plays are constantly evolving, and this is a way to further improve players by
 
-
-
-
-
 allowing them to review previous data, and can also be used by coaches. It could also be used
 
 by the average person to simply see what the outcome of a game or play was.
 
+
+
 **Project Design:**
-
-Designing this visualization was very difficult for me, initially I wanted to do this because the
-
-other datasets were not interesting to me but after seeing how much trouble I would have
-
-designing this; I wanted to switch to something else. But, I decided to stick with this dataset in
-
-order to challenge myself, and it definitely challenged me especially since I simply know nothing
-
-about football.
 
 The visualization first began with a simple drawing of a field on a canvas, I didn’t want to overlay
 
@@ -138,7 +116,7 @@ gameId in order to populate the plays list. The frame slider will take the selec
 
 slice for the final frame in order to get the max\_frame which we then assign to the frame slider
 
-to build the slider values [1, max\_frame]. Start, pause, and reset buttons are built to be listened
+to build the slider values [1, max_frame]. Start, pause, and reset buttons are built to be listened
 
 for while drawing the data onto the field. Finally, the selected player path function was slightly
 
@@ -161,10 +139,6 @@ drawn onto the field, for user-ease I decided to separate them in order to preve
 overlapping. The main issue would arise when drawing player paths, previously it would allow
 
 for multiple player paths to be shown but this would look very unpleasant, especially during
-
-
-
-
 
 tighter plays - so I’ve opted for an option to hide/show player paths as well as limiting the drawn
 
@@ -196,6 +170,8 @@ optimized after my presentation due to the player paths causing performance issu
 
 overlapping - the drawing would need to be layered in order to make it visually pleasing.
 
+
+
 **Visualization Examples:**
 
 During Season 2020, Week 1’s Houston Texans vs Kansas City Chiefs we review Play #2437
@@ -210,15 +186,8 @@ wasn’t ideal and should’ve gone further. We can also see Antonio Hamilton ru
 
 the play to bring away a defender, but it wasn’t effective since Keion Crossen was still able to
 
-make a small correction to his path to get to Mecole Hardman (Figure 2, Figure 3).
+make a small correction to his path to get to Mecole Hardman.
 
-Figure 2
-
-
-
-
-
-Figure 3
 
 During Season 2020, Week 1’s Tampa Bay Buccaneers vs New Orleans Saints we review play
 
@@ -232,7 +201,5 @@ which is run a fair amount by Deonte Harris. Specific key points in this play ar
 
 where Deonte Harris is able to avoid Jamel Dean and from frame 123 until the final frame, we
 
-can see him outrunning six Buccaneers to reach the 18 yard line (Figure 4).
-
-(Figure 4)
+can see him outrunning six Buccaneers to reach the 18 yard line.
 
