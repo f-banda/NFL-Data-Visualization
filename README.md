@@ -2,7 +2,7 @@
 
 **NFL Special Teams Data Visualization**
 
-**Preview::**
+**Preview:**
 
 <https://observablehq.com/d/29a945f48b8c39dc>
 
